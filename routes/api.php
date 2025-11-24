@@ -9,5 +9,5 @@ use App\Http\Controllers\AuthController;
 Route::post('/auth/register', [AuthController::class, 'createUser']);
 Route::post('/auth/login', [AuthController::class, 'loginUser']);
 
-Route::middleware('auth:sanctum')->get('/note', [NoteController::class, 'index']);
-Route::middleware('auth:sanctum')->post('/note', [NoteController::class, 'store']);
+Route::middleware('auth:sanctum')->get('/notes', [NoteController::class, 'index']);
+Route::middleware('auth:sanctum')->post('/notes', [NoteController::class, 'store']);
